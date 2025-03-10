@@ -42,7 +42,7 @@ void MainWindow::on_windows_tweaks_clicked()
     QVBoxLayout* layout = new QVBoxLayout;
     layout->addWidget(myWidget);
     setLayout(layout);
-    myWidget->show(); myWidget->move(0,30);
+    myWidget->show(); myWidget->move(0,39);
 }
 
 

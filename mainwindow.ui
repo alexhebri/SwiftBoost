@@ -51,7 +51,7 @@
       <x>0</x>
       <y>0</y>
       <width>1001</width>
-      <height>32</height>
+      <height>42</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -60,7 +60,7 @@
        <property name="minimumSize">
         <size>
          <width>130</width>
-         <height>30</height>
+         <height>35</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -82,7 +82,7 @@
        <property name="minimumSize">
         <size>
          <width>130</width>
-         <height>30</height>
+         <height>35</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -104,7 +104,7 @@
        <property name="minimumSize">
         <size>
          <width>130</width>
-         <height>30</height>
+         <height>35</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -123,7 +123,7 @@
        <property name="minimumSize">
         <size>
          <width>130</width>
-         <height>30</height>
+         <height>35</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -142,7 +142,7 @@
        <property name="minimumSize">
         <size>
          <width>130</width>
-         <height>30</height>
+         <height>35</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -161,7 +161,7 @@
        <property name="minimumSize">
         <size>
          <width>130</width>
-         <height>30</height>
+         <height>35</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -183,7 +183,7 @@
        <property name="minimumSize">
         <size>
          <width>130</width>
-         <height>30</height>
+         <height>35</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -206,9 +206,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>30</y>
+      <y>40</y>
       <width>1001</width>
-      <height>471</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="maximumSize">
