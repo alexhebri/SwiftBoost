@@ -29,16 +29,16 @@ void MainWindow::on_main_menu_clicked()
 
 void MainWindow::on_windows_tweaks_clicked()
 {
-    // Create and show the WindowsTweaks widget
+
     windowstweaks *myWidget = new windowstweaks(this);
 
-    // Find the QGroupBox and set its title
+
     QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_windows");
     if (groupBox) {
         groupBox->setTitle("Windows Tweaks");
     }
 
-    // Set the layout and show the loaded UI
+
     QVBoxLayout* layout = new QVBoxLayout;
     layout->addWidget(myWidget);
     setLayout(layout);
