@@ -223,42 +223,10 @@
     <property name="title">
      <string/>
     </property>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>160</y>
-       <width>421</width>
-       <height>121</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>PushButton</string>
-     </property>
-    </widget>
    </widget>
    <zorder>layoutWidget</zorder>
    <zorder>group_windows</zorder>
    <zorder>graphicsView</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1000</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="cursor">
-    <cursorShape>ArrowCursor</cursorShape>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="defaultUp">
-    <bool>false</bool>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

@@ -22,6 +22,10 @@ MainWindow::~MainWindow()
 }
 
 
+void MainWindow::on_main_menu_clicked()
+{
+    ui->group_windows->setVisible(false);
+}
 
 void MainWindow::on_windows_tweaks_clicked()
 {
@@ -31,7 +35,7 @@ void MainWindow::on_windows_tweaks_clicked()
     // Find the QGroupBox and set its title
     QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_windows");
     if (groupBox) {
-        groupBox->setTitle("Settings Group");
+        groupBox->setTitle("Windows Tweaks");
     }
 
     // Set the layout and show the loaded UI
@@ -42,8 +46,8 @@ void MainWindow::on_windows_tweaks_clicked()
 }
 
 
-void MainWindow::on_main_menu_clicked()
+void MainWindow::on_cpu_tweaks_clicked()
 {
-    ui->group_windows->setVisible(false);
+
 }
 

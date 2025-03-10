@@ -23,6 +23,8 @@ private slots:
 
     void on_main_menu_clicked();
 
+    void on_cpu_tweaks_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
