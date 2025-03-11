@@ -12,3 +12,9 @@ windowstweaks::~windowstweaks()
 {
     delete ui;
 }
+
+void windowstweaks::on_restore_point_clicked()
+{
+
+}
+

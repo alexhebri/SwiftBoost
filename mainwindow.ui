@@ -228,7 +228,6 @@
    <zorder>group_windows</zorder>
    <zorder>graphicsView</zorder>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
