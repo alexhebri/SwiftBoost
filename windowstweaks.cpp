@@ -91,3 +91,35 @@ void windowstweaks::on_restore_point_clicked()
     }
 }
 
+
+void windowstweaks::on_disable_uac_clicked()
+{
+    int result = system("cmd /c REG ADD HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v EnableLUA /t REG_DWORD /d 0 /f");
+
+
+    if (result == 0) {
+        QMessageBox::information(this, tr("Operation Complete"),
+                                 tr("Command to disable User Account Control was executed.\n"));
+    } else {
+        QMessageBox::warning(this, tr("Operation Failed"),
+                             tr("Failed to modify UAC settings. This requires administrator privileges."));
+    }
+}
+
+
+void windowstweaks::on_windows_update_clicked()
+{
+    system("net stop wuauserv");
+    system("net stop UsoSvc");
+    system("reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v \"DoNotConnectToWindowsUpdateInternetLocations\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v \"SetDisableUXWUAccess\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\" /v \"NoAutoUpdate\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v \"ExcludeWUDriversInQualityUpdate\" /t REG_DWORD /d \"1\" /f");
+}
+
+
+void windowstweaks::on_disable_findmydevice_clicked()
+{
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /t REG_DWORD /d \"1\" /f");
+}
+
