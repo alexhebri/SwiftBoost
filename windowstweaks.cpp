@@ -123,3 +123,9 @@ void windowstweaks::on_disable_findmydevice_clicked()
     system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /t REG_DWORD /d \"1\" /f");
 }
 
+
+void windowstweaks::on_disable_transparency_clicked()
+{
+
+}
+
