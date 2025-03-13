@@ -24,6 +24,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         windowstweaks.h windowstweaks.cpp windowstweaks.ui
+        cpu_tweaks.h cpu_tweaks.cpp cpu_tweaks.ui
 
 
     )
