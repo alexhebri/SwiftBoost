@@ -126,6 +126,142 @@ void windowstweaks::on_disable_findmydevice_clicked()
 
 void windowstweaks::on_disable_transparency_clicked()
 {
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" /v \"EnableTransparency\" /t REG_DWORD /d \"0\" /f");
+
+}
+
+
+void windowstweaks::on_disable_loc_not_hgr_clicked()
+{
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\location\" /v \"Value\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\appDiagnostics\" /v \"Value\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\notifications\" /v \"Value\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"Start_TrackDocs\" /t REG_DWORD /d 0 /f");
+    system("reg add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"HideFileExt\" /t REG_DWORD /d 0 /f");
+    system("net stop homegroupprovider");
+    system("sc config homegroupprovider start= disabled");
+    system("reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v HomeGroupDisabled /t REG_DWORD /d 1 /f");
+    system("reg add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v NoHomeGroup /t REG_DWORD /d 1 /f");
+}
+
+
+
+
+void windowstweaks::on_disable_game_cort_sync_clicked()
+{
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"0\" /f");
+
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCortana\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\Account\" /v \"Enabled\" /t REG_DWORD /d \"0\" /f");
+
+    system("sc stop XboxLiveAuthManager");
+    system("sc stop XboxNetApiSvc");
+    system("sc config XboxLiveAuthManager start= disabled");
+    system("sc config XboxNetApiSvc start= disabled");
+}
+
+
+void windowstweaks::on_enable_game_hardacc_clicked()
+{
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"1\" /f");
+
+    system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"1\" /f");
+
+}
+
+
+void windowstweaks::on_disable_keys_narr_magn_clicked()
+{
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"122\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"58\" /f");
+
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\Narrator\\NoRoam\" /v \"WinEnterLaunchEnabled\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\ScreenMagnifier\" /v \"Magnification\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Speech\" /v \"AllowOnlineSpeechRecognition\" /t REG_DWORD /d \"0\" /f");
+}
+
+
+void windowstweaks::on_disable_telemetry_and_data_clicked()
+{
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"PublishUserActivities\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"UploadUserActivities\" /t REG_DWORD /d \"0\" /f");
+
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v \"AllowTelemetry\" /t REG_DWORD /d \"0\" /f");
+
+}
+
+
+void windowstweaks::on_disable_onedrive_unnapps_clicked()
+{
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppPrivacy\" /v \"LetAppsRunInBackground\" /t REG_DWORD /d \"2\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\OneDrive\" /v \"DisableFileSyncNGSC\" /t REG_DWORD /d \"1\" /f");
+}
+
+
+void windowstweaks::on_priority_and_mouse_keyboard_clicked()
+{
+    system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\PriorityControl\" /v \"Win32PrioritySeparation\" /t REG_SZ /d \"2a\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\kbdclass\\Parameters\" /v \"KeyboardDataQueueSize\" /t REG_DWORD /d \"23\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\mouclass\\Parameters\" /v \"MouseDataQueueSize\" /t REG_DWORD /d \"23\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\MouseKeys\" /v \"Flags\" /t REG_SZ /d \"42\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\Keyboard Response\" /v \"AutoRepeatDelay\" /t REG_SZ /d \"200\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Mouse\" /v \"MouseHoverTime\" /t REG_SZ /d \"0\" /f");
+}
+
+
+void windowstweaks::on_run_all_clicked()
+{
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\location\" /v \"Value\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\appDiagnostics\" /v \"Value\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\notifications\" /v \"Value\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\" /v \"EnableTransparency\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\" /v \"NoAutoUpdate\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCortana\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\Account\" /v \"Enabled\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"122\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"58\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\MouseKeys\" /v \"Flags\" /t REG_SZ /d \"42\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\Narrator\\NoRoam\" /v \"WinEnterLaunchEnabled\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\ScreenMagnifier\" /v \"Magnification\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Speech\" /v \"AllowOnlineSpeechRecognition\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"PublishUserActivities\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"UploadUserActivities\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v \"AllowTelemetry\" /t REG_DWORD /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppPrivacy\" /v \"LetAppsRunInBackground\" /t REG_DWORD /d \"2\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\OneDrive\" /v \"DisableFileSyncNGSC\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\PriorityControl\" /v \"Win32PrioritySeparation\" /t REG_SZ /d \"2a\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\Keyboard Response\" /v \"AutoRepeatDelay\" /t REG_SZ /d \"200\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\Control Panel\\Mouse\" /v \"MouseHoverTime\" /t REG_SZ /d \"0\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\kbdclass\\Parameters\" /v \"KeyboardDataQueueSize\" /t REG_DWORD /d \"23\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\mouclass\\Parameters\" /v \"MouseDataQueueSize\" /t REG_DWORD /d \"23\" /f");
+    system("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /t REG_DWORD /d \"1\" /f");
+
+    system("sc stop XboxLiveAuthManager");
+    system("sc stop XboxNetApiSvc");
+    system("sc config XboxLiveAuthManager start= disabled");
+    system("sc config XboxNetApiSvc start= disabled");
+
+    system("net stop wuauserv");
+    system("net stop UsoSvc");
+    system("reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v \"DoNotConnectToWindowsUpdateInternetLocations\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v \"SetDisableUXWUAccess\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\" /v \"NoAutoUpdate\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v \"ExcludeWUDriversInQualityUpdate\" /t REG_DWORD /d \"1\" /f");
+    system("reg add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"Start_TrackDocs\" /t REG_DWORD /d 0 /f");
+    system("net stop homegroupprovider");
+    system("sc config homegroupprovider start= disabled");
+    system("reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v HomeGroupDisabled /t REG_DWORD /d 1 /f");
+    system("reg add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v NoHomeGroup /t REG_DWORD /d 1 /f");
+    system("reg add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"HideFileExt\" /t REG_DWORD /d 0 /f");
 
 }
 

@@ -120,7 +120,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="run_all">
              <property name="minimumSize">
               <size>
                <width>231</width>
@@ -179,7 +179,7 @@
             <number>10</number>
            </property>
            <item>
-            <widget class="QPushButton" name="Aa_8">
+            <widget class="QPushButton" name="disable_transparency">
              <property name="minimumSize">
               <size>
                <width>231</width>
@@ -267,7 +267,7 @@
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_7">
         <item>
-         <widget class="QPushButton" name="Aa_6">
+         <widget class="QPushButton" name="disable_loc_not_hgr">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -295,7 +295,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="Aa_9">
+         <widget class="QPushButton" name="disable_game_cort_sync">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -323,7 +323,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="Aa_10">
+         <widget class="QPushButton" name="enable_game_hardacc">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -351,7 +351,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="Aa_13">
+         <widget class="QPushButton" name="disable_keys_narr_magn">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -379,7 +379,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="Aa_12">
+         <widget class="QPushButton" name="disable_telemetry_and_data">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -407,7 +407,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="Aa_15">
+         <widget class="QPushButton" name="disable_onedrive_unnapps">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -429,7 +429,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="Aa_11">
+         <widget class="QPushButton" name="priority_and_mouse_keyboard">
           <property name="minimumSize">
            <size>
             <width>231</width>
