@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "windowstweaks.h" // Include the header for WindowsTweaks
+#include "cpu_tweaks.h"
+#include "windowstweaks.h"
+
+
 #include <QWidget>
 #include <QGroupBox>
 #include <QFile>
@@ -48,6 +51,17 @@ void MainWindow::on_windows_tweaks_clicked()
 
 void MainWindow::on_cpu_tweaks_clicked()
 {
+    cpu_tweaks *myWidget = new cpu_tweaks(this);
+
+    QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_cpu");
+    if (groupBox) {
+        groupBox->setTitle("CPU Tweaks");
+    }
+
+    QVBoxLayout* layout = new QVBoxLayout;
+    layout->addWidget(myWidget);
+    setLayout(layout);
+    myWidget->show(); myWidget->move(0,39);
 
 }
 
