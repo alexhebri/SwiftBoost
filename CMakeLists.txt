@@ -25,6 +25,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         windowstweaks.h windowstweaks.cpp windowstweaks.ui
         cpu_tweaks.h cpu_tweaks.cpp cpu_tweaks.ui
+        gpu_tweaks.h gpu_tweaks.cpp gpu_tweaks.ui
 
 
     )
