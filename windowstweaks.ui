@@ -260,12 +260,15 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>30</y>
+         <y>20</y>
          <width>571</width>
-         <height>452</height>
+         <height>411</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_7">
+        <property name="spacing">
+         <number>5</number>
+        </property>
         <item>
          <widget class="QPushButton" name="disable_loc_not_hgr">
           <property name="minimumSize">
@@ -444,34 +447,6 @@
           </property>
           <property name="text">
            <string>Priority Separation Tweak's, Mouse and Keyboard Fix</string>
-          </property>
-          <property name="checkable">
-           <bool>false</bool>
-          </property>
-          <property name="autoRepeat">
-           <bool>false</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Aa_14">
-          <property name="minimumSize">
-           <size>
-            <width>231</width>
-            <height>51</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>571</width>
-            <height>51</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>a</string>
           </property>
           <property name="checkable">
            <bool>false</bool>
