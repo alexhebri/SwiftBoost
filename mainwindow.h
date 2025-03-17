@@ -25,6 +25,8 @@ private slots:
 
     void on_cpu_tweaks_clicked();
 
+    void on_gpu_tweaks_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

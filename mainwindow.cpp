@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "cpu_tweaks.h"
 #include "windowstweaks.h"
+#include "gpu_tweaks.h"
 
 
 #include <QWidget>
@@ -63,5 +64,21 @@ void MainWindow::on_cpu_tweaks_clicked()
     setLayout(layout);
     myWidget->show(); myWidget->move(0,39);
 
+}
+
+
+void MainWindow::on_gpu_tweaks_clicked()
+{
+    gpu_tweaks *myWidget = new gpu_tweaks(this);
+
+    QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_gpu");
+    if (groupBox) {
+        groupBox->setTitle("GPU Tweaks");
+    }
+
+    QVBoxLayout* layout = new QVBoxLayout;
+    layout->addWidget(myWidget);
+    setLayout(layout);
+    myWidget->show(); myWidget->move(0,39);
 }
 
