@@ -31,7 +31,7 @@
   <property name="windowTitle">
    <string>GroupBox</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -61,7 +61,7 @@
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -75,7 +75,7 @@
          <number>10</number>
         </property>
         <item>
-         <widget class="QPushButton" name="aaa">
+         <widget class="QPushButton" name="cpu_runall">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -110,7 +110,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_2">
+         <widget class="QPushButton" name="cpu_general">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -118,7 +118,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Run All Tweaks</string>
+           <string>CPU General Optimization</string>
           </property>
           <property name="checkable">
            <bool>false</bool>
@@ -132,7 +132,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_3">
+         <widget class="QPushButton" name="cpu_responsiveness">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -140,7 +140,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Run All Tweaks</string>
+           <string>Increase System Responsiveness</string>
           </property>
           <property name="checkable">
            <bool>false</bool>
@@ -162,7 +162,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Run All Tweaks</string>
+           <string>-</string>
           </property>
           <property name="checkable">
            <bool>false</bool>
@@ -184,7 +184,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Run All Tweaks</string>
+           <string>-</string>
           </property>
           <property name="checkable">
            <bool>false</bool>
@@ -225,7 +225,7 @@
            <number>1</number>
           </property>
           <item>
-           <widget class="QPushButton" name="aaa_7">
+           <widget class="QPushButton" name="cpu_intel">
             <property name="minimumSize">
              <size>
               <width>231</width>
@@ -233,7 +233,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Run All Tweaks</string>
+             <string>Intel CPU Priority</string>
             </property>
             <property name="checkable">
              <bool>false</bool>
@@ -247,7 +247,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="aaa_8">
+           <widget class="QPushButton" name="cpu_amd">
             <property name="minimumSize">
              <size>
               <width>231</width>
@@ -255,7 +255,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Run All Tweaks</string>
+             <string>AMD CPU Priority</string>
             </property>
             <property name="checkable">
              <bool>false</bool>
@@ -294,7 +294,7 @@
            <number>1</number>
           </property>
           <item>
-           <widget class="QPushButton" name="aaa_5">
+           <widget class="QPushButton" name="disable_idle">
             <property name="minimumSize">
              <size>
               <width>231</width>
@@ -302,7 +302,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Run All Tweaks</string>
+             <string>Disable CPU Idle State</string>
             </property>
             <property name="checkable">
              <bool>false</bool>
@@ -316,7 +316,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="aaa_6">
+           <widget class="QPushButton" name="enable_idle">
             <property name="minimumSize">
              <size>
               <width>231</width>
@@ -324,7 +324,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Run All Tweaks</string>
+             <string>Enable CPU Idle State (Revert)</string>
             </property>
             <property name="checkable">
              <bool>false</bool>

@@ -31,7 +31,7 @@
   <property name="windowTitle">
    <string>GroupBox</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -70,7 +70,7 @@
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -128,7 +128,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_2">
+         <widget class="QPushButton" name="nvidia_reg">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -150,7 +150,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_4">
+         <widget class="QPushButton" name="nvidia_advanced">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -256,7 +256,7 @@
          <number>1</number>
         </property>
         <item>
-         <widget class="QPushButton" name="aaa_6">
+         <widget class="QPushButton" name="amd_all">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -291,7 +291,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_7">
+         <widget class="QPushButton" name="amd_reg">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -313,7 +313,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_8">
+         <widget class="QPushButton" name="amd_boost">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -335,7 +335,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_9">
+         <widget class="QPushButton" name="amd_radeon">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -357,7 +357,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_10">
+         <widget class="QPushButton" name="amd_ultralow">
           <property name="minimumSize">
            <size>
             <width>231</width>
