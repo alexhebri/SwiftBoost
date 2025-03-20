@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "cpu_tweaks.h"
+#include "network.h"
+#include "power_tweaks.h"
 #include "windowstweaks.h"
 #include "gpu_tweaks.h"
 
@@ -74,6 +76,38 @@ void MainWindow::on_gpu_tweaks_clicked()
     QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_gpu");
     if (groupBox) {
         groupBox->setTitle("GPU Tweaks");
+    }
+
+    QVBoxLayout* layout = new QVBoxLayout;
+    layout->addWidget(myWidget);
+    setLayout(layout);
+    myWidget->show(); myWidget->move(0,39);
+}
+
+
+void MainWindow::on_network_clicked()
+{
+    network *myWidget = new network(this);
+
+    QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_network");
+    if (groupBox) {
+        groupBox->setTitle("Network Tweaks");
+    }
+
+    QVBoxLayout* layout = new QVBoxLayout;
+    layout->addWidget(myWidget);
+    setLayout(layout);
+    myWidget->show(); myWidget->move(0,39);
+}
+
+
+void MainWindow::on_power_tweaks_clicked()
+{
+    power_tweaks *myWidget = new power_tweaks(this);
+
+    QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_power");
+    if (groupBox) {
+        groupBox->setTitle("Power Tweaks");
     }
 
     QVBoxLayout* layout = new QVBoxLayout;

@@ -138,26 +138,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="network">
-       <property name="minimumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Network</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="create_snapshot">
+      <widget class="QPushButton" name="power_tweaks">
        <property name="minimumSize">
         <size>
          <width>130</width>
@@ -174,7 +155,26 @@
         <bool>false</bool>
        </property>
        <property name="text">
-        <string>BIOS Tweaks</string>
+        <string>Power Tweaks</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="network">
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>130</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Network and Debloat</string>
        </property>
       </widget>
      </item>

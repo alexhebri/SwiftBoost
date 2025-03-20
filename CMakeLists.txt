@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         cpu_tweaks.h cpu_tweaks.cpp cpu_tweaks.ui
         gpu_tweaks.h gpu_tweaks.cpp gpu_tweaks.ui
         network.h network.cpp network.ui
+        power_tweaks.h power_tweaks.cpp power_tweaks.ui
+        revert_and_services.h revert_and_services.cpp revert_and_services.ui
 
 
     )

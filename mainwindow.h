@@ -27,6 +27,10 @@ private slots:
 
     void on_gpu_tweaks_clicked();
 
+    void on_network_clicked();
+
+    void on_power_tweaks_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

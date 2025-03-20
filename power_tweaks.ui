@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>power_tweaks</class>
+ <widget class="QGroupBox" name="power_tweaks">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>460</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>460</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>GroupBox</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>961</width>
+     <height>433</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="minimumSize">
+         <size>
+          <width>351</width>
+          <height>201</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>Shortcut's</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="run_ultimate">
+             <property name="minimumSize">
+              <size>
+               <width>231</width>
+               <height>51</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Run All Tweak's (Ultimate Powerplan)</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="run_high">
+             <property name="minimumSize">
+              <size>
+               <width>231</width>
+               <height>51</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Run All Tweak's (High Powerplan)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="minimumSize">
+         <size>
+          <width>351</width>
+          <height>201</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>Power Plan's</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,0,0">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="plan_ultimate">
+             <property name="minimumSize">
+              <size>
+               <width>231</width>
+               <height>51</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Ultimate Performance Powerplan</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="plan_high">
+             <property name="minimumSize">
+              <size>
+               <width>231</width>
+               <height>51</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>High Performance Powerplan</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="extra_performance">
+             <property name="minimumSize">
+              <size>
+               <width>231</width>
+               <height>51</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Extra Performance Tweak's (PC ONLY)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="minimumSize">
+       <size>
+        <width>591</width>
+        <height>431</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Tweak's List</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>571</width>
+         <height>411</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="disable_powerthrottling">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>571</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Disable Power Throttling and Power Saver Mode</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="disable_sleep">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>571</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Disable Sleep Mode and Hibernate</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mmcss">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>571</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>MMCSS Tweaks and Prevent Hard Drives from Going to Sleep</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="disable_fullscreenglobally">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>571</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Disable Full Screen Optimizations Globally</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="disable_cpupark_2">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Prevent Windows from Lowering CPU Speed and CPU Parking</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="disable_automaint">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>571</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Disable Auto Maintenance and Fast Startup</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="gpu_Max">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Keep GPU Running at Maximum Performance (PC Reccomended)</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
