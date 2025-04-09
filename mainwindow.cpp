@@ -5,6 +5,7 @@
 #include "power_tweaks.h"
 #include "windowstweaks.h"
 #include "gpu_tweaks.h"
+#include "revert_and_services.h"
 
 
 #include <QWidget>
@@ -108,6 +109,22 @@ void MainWindow::on_power_tweaks_clicked()
     QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_power");
     if (groupBox) {
         groupBox->setTitle("Power Tweaks");
+    }
+
+    QVBoxLayout* layout = new QVBoxLayout;
+    layout->addWidget(myWidget);
+    setLayout(layout);
+    myWidget->show(); myWidget->move(0,39);
+}
+
+
+void MainWindow::on_revert_and_services_clicked()
+{
+    revert_and_services *myWidget = new revert_and_services(this);
+
+    QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_revert_and_services");
+    if (groupBox) {
+        groupBox->setTitle("Revert and Services");
     }
 
     QVBoxLayout* layout = new QVBoxLayout;

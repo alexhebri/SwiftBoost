@@ -31,6 +31,480 @@
   <property name="windowTitle">
    <string>GroupBox</string>
   </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>981</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>Disable Services Menu</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter</set>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>471</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QPushButton" name="disable_unwanted">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Disable All Unwanted Services</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="disable_unnecessary">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Disable Unnecessary Services</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="disable_telemetry">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Disable Telemetry and Diagnostics</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>Enable Services Menu</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter</set>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>471</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QPushButton" name="enable_unwanted">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Enable All Unwanted Services</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="enable_unnecessary">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Enable Unnecessary Services</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="enable_telemetry">
+          <property name="minimumSize">
+           <size>
+            <width>231</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Enable Telemetry and Diagnostics</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>981</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="title">
+       <string>Disable More Services / Reverts</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter</set>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>471</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QPushButton" name="disable_bluetooth">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Bluetooth Services</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disable_xbox">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Xbox Services</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disable_printer">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Printer Services</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disable_updates">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Windows Update Services</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QPushButton" name="disable_transparency">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Transparency</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disable_findmydevice">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Find My Device</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disable_notifications">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Notifications</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disable_power_throttling">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Power Throttling</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_8">
+      <property name="title">
+       <string>Enable More Services / Reverts</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter</set>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>471</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QPushButton" name="enable_bluetooth">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Bluetooth Services</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="enable_xbox">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Xbox Services</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="enable_printer">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Printer Services</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="enable_updates">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Windows Update Services</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QPushButton" name="enable_transparency">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Transparency</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="enable_findmydevice">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Find My Device</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="enable_notifications">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Notifications</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="enable_power_throttling">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Power Throttling</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections/>

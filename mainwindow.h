@@ -31,6 +31,8 @@ private slots:
 
     void on_power_tweaks_clicked();
 
+    void on_revert_and_services_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
