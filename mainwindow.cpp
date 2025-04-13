@@ -12,6 +12,9 @@
 #include <QWidget>
 #include <QGroupBox>
 #include <QFile>
+#include <QIcon>
+#include <QApplication>
+#include <QMainWindow>
 #include <QVBoxLayout>
 
 
@@ -21,6 +24,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("SwiftBoost");
+
+    QIcon windowIcon("C:/Users/Alex/Desktop/Optimization_Program-UI/logo_1.png");
+    setWindowIcon(windowIcon);
+
     mainmenu *myWidget = new mainmenu(this);
 
     QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_mainmenu");

@@ -224,9 +224,20 @@
      <string/>
     </property>
    </widget>
+   <widget class="QGraphicsView" name="graphicsView_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>510</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
    <zorder>layoutWidget</zorder>
    <zorder>group_windows</zorder>
    <zorder>graphicsView</zorder>
+   <zorder>graphicsView_2</zorder>
   </widget>
  </widget>
  <resources/>
