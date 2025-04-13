@@ -29,6 +29,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         network.h network.cpp network.ui
         power_tweaks.h power_tweaks.cpp power_tweaks.ui
         revert_and_services.h revert_and_services.cpp revert_and_services.ui
+        mainmenu.h mainmenu.cpp mainmenu.ui
 
 
     )

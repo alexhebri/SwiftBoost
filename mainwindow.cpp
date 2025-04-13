@@ -6,6 +6,7 @@
 #include "windowstweaks.h"
 #include "gpu_tweaks.h"
 #include "revert_and_services.h"
+#include "mainmenu.h"
 
 
 #include <QWidget>
@@ -13,25 +14,54 @@
 #include <QFile>
 #include <QVBoxLayout>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setWindowTitle("SwiftBoost");
+    mainmenu *myWidget = new mainmenu(this);
 
-    ui->group_windows->setVisible(false);
+    QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_mainmenu");
+    if (groupBox) {
+        groupBox->setTitle("Main Menu");
+    }
+
+    QVBoxLayout* layout = new QVBoxLayout;
+    layout->addWidget(myWidget);
+    setLayout(layout);
+    myWidget->show(); myWidget->move(0,39);
+
+    //ui->group_mainmenu->setVisible(true);
 }
+
+
 
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    //ui->group_windows->setVisible(true);
 }
 
 
 void MainWindow::on_main_menu_clicked()
 {
-    ui->group_windows->setVisible(false);
+    //ui->group_windows->setVisible(true);
+    mainmenu *myWidget = new mainmenu(this);
+
+
+    QGroupBox* groupBox = myWidget->findChild<QGroupBox*>("group_mainmenu");
+    if (groupBox) {
+        groupBox->setTitle("Main Menu");
+    }
+
+
+    QVBoxLayout* layout = new QVBoxLayout;
+    layout->addWidget(myWidget);
+    setLayout(layout);
+    myWidget->show(); myWidget->move(0,39);
 }
 
 void MainWindow::on_windows_tweaks_clicked()
