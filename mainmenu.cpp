@@ -62,7 +62,7 @@ mainmenu::~mainmenu()
     delete ui;
 }
 
-// Function to get CPU name from Windows registry
+
 QString getCPUName() {
     HKEY hKey;
     char cpuBrand[100] = { 0 };
