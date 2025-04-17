@@ -17,6 +17,7 @@ windowstweaks::windowstweaks(QWidget *parent)
     , ui(new Ui::windowstweaks)
 {
     ui->setupUi(this);
+
 }
 
 windowstweaks::~windowstweaks()

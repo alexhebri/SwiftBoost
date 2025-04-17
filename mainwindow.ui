@@ -10,13 +10,13 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>600</height>
+    <height>545</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1000</width>
-    <height>600</height>
+    <height>545</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -26,218 +26,265 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Optimization Program</string>
+   <string>SwiftBoost</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(27, 34, 35);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGraphicsView" name="graphicsView">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>500</y>
-      <width>1041</width>
-      <height>121</height>
-     </rect>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(14, 246, 204);</string>
+    <property name="leftMargin">
+     <number>0</number>
     </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1001</width>
-      <height>42</height>
-     </rect>
+    <property name="topMargin">
+     <number>0</number>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="main_menu">
-       <property name="minimumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(58, 79, 80);</string>
-       </property>
-       <property name="text">
-        <string>Main Menu</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="windows_tweaks">
-       <property name="minimumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Windows Tweaks</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="cpu_tweaks">
-       <property name="minimumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>CPU Tweaks</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="gpu_tweaks">
-       <property name="minimumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>GPU Tweaks</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="power_tweaks">
-       <property name="minimumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Power Tweaks</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="network">
-       <property name="minimumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Network and Debloat</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="revert_and_services">
-       <property name="minimumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>130</width>
-         <height>35</height>
-        </size>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Revert and Services</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QGroupBox" name="group_windows">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>40</y>
-      <width>1001</width>
-      <height>461</height>
-     </rect>
+    <property name="rightMargin">
+     <number>0</number>
     </property>
-    <property name="maximumSize">
-     <size>
-      <width>16777215</width>
-      <height>16777215</height>
-     </size>
+    <property name="bottomMargin">
+     <number>0</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">gridline-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>510</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <zorder>layoutWidget</zorder>
-   <zorder>group_windows</zorder>
-   <zorder>graphicsView</zorder>
-   <zorder>graphicsView_2</zorder>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="main_menu">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(58, 79, 80);
+color: white;</string>
+        </property>
+        <property name="text">
+         <string>Main Menu</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="windows_tweaks">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(14, 246, 204);
+color: black;</string>
+        </property>
+        <property name="text">
+         <string>Windows Tweaks</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cpu_tweaks">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(58, 79, 80);
+color: white;</string>
+        </property>
+        <property name="text">
+         <string>CPU Tweaks</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="gpu_tweaks">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(58, 79, 80);
+color: white;</string>
+        </property>
+        <property name="text">
+         <string>GPU Tweaks</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="power_tweaks">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(58, 79, 80);
+color: white;</string>
+        </property>
+        <property name="text">
+         <string>Power Tweaks</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="network">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(58, 79, 80);
+color: white;</string>
+        </property>
+        <property name="text">
+         <string>Network</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="revert_and_services">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(58, 79, 80);
+color: white;</string>
+        </property>
+        <property name="text">
+         <string>Revert / Services</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="group_windows">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">gridline-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QVBoxLayout" name="contentLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(14, 246, 204);</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

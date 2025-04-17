@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>460</height>
+    <width>999</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,13 +23,11 @@
     </rect>
    </property>
    <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
+    <enum>QFrame::Shape::StyledPanel</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+    <enum>QFrame::Shadow::Raised</enum>
    </property>
-
-   <!-- Logo -->
    <widget class="QLabel" name="label_logo">
     <property name="geometry">
      <rect>
@@ -46,8 +44,6 @@
      <bool>true</bool>
     </property>
    </widget>
-
-   <!-- Title -->
    <widget class="QLabel" name="label_title">
     <property name="geometry">
      <rect>
@@ -64,8 +60,6 @@
      <string>Welcome to SwiftBoost</string>
     </property>
    </widget>
-
-   <!-- Subtitle -->
    <widget class="QLabel" name="label_subtitle">
     <property name="geometry">
      <rect>
@@ -82,8 +76,6 @@
      <string>Analyze, Optimize, and Boost your Windows experience</string>
     </property>
    </widget>
-
-   <!-- System Specifications -->
    <widget class="QGroupBox" name="groupBox_specs">
     <property name="geometry">
      <rect>
@@ -93,11 +85,11 @@
       <height>240</height>
      </rect>
     </property>
-    <property name="title">
-     <string>System Specifications</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QGroupBox { font-size: 16px; font-weight: bold; color: #2E8B57; border: 1px solid #ccc; border-radius: 10px; padding: 10px; }</string>
+    </property>
+    <property name="title">
+     <string>System Specifications</string>
     </property>
     <layout class="QFormLayout" name="formLayout_specs">
      <item row="0" column="0">
@@ -114,7 +106,6 @@
        </property>
       </widget>
      </item>
-
      <item row="1" column="0">
       <widget class="QLabel" name="label_gpu_title">
        <property name="text">
@@ -129,7 +120,6 @@
        </property>
       </widget>
      </item>
-
      <item row="2" column="0">
       <widget class="QLabel" name="label_ram_title">
        <property name="text">
@@ -144,7 +134,6 @@
        </property>
       </widget>
      </item>
-
      <item row="3" column="0">
       <widget class="QLabel" name="label_disk_title">
        <property name="text">
@@ -159,7 +148,6 @@
        </property>
       </widget>
      </item>
-
      <item row="4" column="0">
       <widget class="QLabel" name="label_os_title">
        <property name="text">
@@ -174,7 +162,6 @@
        </property>
       </widget>
      </item>
-
      <item row="5" column="0">
       <widget class="QLabel" name="label_type_title">
        <property name="text">
@@ -189,7 +176,6 @@
        </property>
       </widget>
      </item>
-
      <item row="6" column="0">
       <widget class="QLabel" name="label_rating_title">
        <property name="text">
@@ -206,7 +192,6 @@
      </item>
     </layout>
    </widget>
-
   </widget>
  </widget>
  <resources/>
