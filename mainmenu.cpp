@@ -4,6 +4,8 @@
 #include <QSysInfo>
 #include <QStorageInfo>
 #include <QTextStream>
+#include <QTextBrowser>
+#include <QGroupBox>
 
 QString getCPUName();
 QString getGPUInfoLabeled();
@@ -19,18 +21,31 @@ mainmenu::mainmenu(QWidget *parent)
 {
     ui->setupUi(this);
 
+
+
+    ui->textBrowser_info->setStyleSheet(R"(
+    QTextBrowser {
+        background-color: #111111;
+        color: #c8c8c8;
+        border: none;
+        padding: 10px;
+        font: 12px 'Segoe UI';
+    }
+)");
+
     QString info;
     QTextStream stream(&info);
 
-    stream << "🧠 CPU: " << getCPUName() << "\n";
-    stream << "🎮 GPU: " << getGPUInfoLabeled() << "\n";
-    stream << "💾 RAM: " << getRAMInfo() << "\n";
-    stream << "💽 Disk: " << getDiskInfo() << "\n";
-    stream << "🖥️ OS: " << getOSInfo() << "\n";
-    stream << "🏷️ Windows Type: " << getWindowsType() << "\n";
-    stream << "⭐ Overall Rating: " << getSystemRating() << "\n";
 
-    ui->textBrowser->setText(info);
+    info += "🧠  <b>CPU:</b> " + getCPUName() + "<br>";
+    info += "🎮  <b>GPU:</b> " + getGPUInfoLabeled().replace("\n", "<br>&nbsp;&nbsp;&nbsp;&nbsp;") + "<br>";
+    info += "💾  <b>RAM:</b> " + getRAMInfo() + "<br>";
+    info += "💽  <b>Disk:</b> " + getDiskInfo() + "<br>";
+    info += "🖥️  <b>OS:</b> " + getOSInfo() + "<br>";
+    info += "🏷️  <b>Windows Type:</b> " + getWindowsType() + "<br>";
+    info += "⭐  <b>Overall Rating:</b> " + getSystemRating() + "<br>";
+
+    ui->textBrowser_info->setHtml(info);
 }
 
 mainmenu::~mainmenu()

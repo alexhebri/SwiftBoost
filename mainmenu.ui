@@ -31,7 +31,7 @@
   <property name="windowTitle">
    <string>GroupBox</string>
   </property>
-  <widget class="QTextBrowser" name="textBrowser">
+  <widget class="QTextBrowser" name="textBrowser_info">
    <property name="geometry">
     <rect>
      <x>20</x>
