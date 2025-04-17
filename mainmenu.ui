@@ -13,8 +13,6 @@
   <property name="windowTitle">
    <string>SwiftBoost - System Overview</string>
   </property>
-
-  <!-- Frame for styling -->
   <widget class="QFrame" name="frame_main">
    <property name="geometry">
     <rect>
@@ -31,7 +29,7 @@
     <enum>QFrame::Raised</enum>
    </property>
 
-   <!-- App Logo and Title -->
+   <!-- Logo -->
    <widget class="QLabel" name="label_logo">
     <property name="geometry">
      <rect>
@@ -42,13 +40,14 @@
      </rect>
     </property>
     <property name="pixmap">
-     <pixmap>:/icons/logo.png</pixmap> <!-- Replace with your icon -->
+     <pixmap>:/icons/logo.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
 
+   <!-- Title -->
    <widget class="QLabel" name="label_title">
     <property name="geometry">
      <rect>
@@ -58,11 +57,11 @@
       <height>40</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Welcome to SwiftBoost</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">font-size: 24px; font-weight: bold; color: #2E8B57;</string>
+    </property>
+    <property name="text">
+     <string>Welcome to SwiftBoost</string>
     </property>
    </widget>
 
@@ -76,31 +75,138 @@
       <height>30</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Analyze, Optimize, and Boost your Windows experience</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">font-size: 14px; color: gray;</string>
     </property>
+    <property name="text">
+     <string>Analyze, Optimize, and Boost your Windows experience</string>
+    </property>
    </widget>
 
-   <!-- Info Box -->
-   <widget class="QTextBrowser" name="textBrowser_info">
+   <!-- System Specifications -->
+   <widget class="QGroupBox" name="groupBox_specs">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>120</y>
+      <y>130</y>
       <width>940</width>
-      <height>290</height>
+      <height>240</height>
      </rect>
     </property>
-    <property name="lineWrapMode">
-     <enum>QTextEdit::WidgetWidth</enum>
+    <property name="title">
+     <string>System Specifications</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #F5F5F5; border: 1px solid #ccc; padding: 10px; font-family: Consolas;</string>
+     <string notr="true">QGroupBox { font-size: 16px; font-weight: bold; color: #2E8B57; border: 1px solid #ccc; border-radius: 10px; padding: 10px; }</string>
     </property>
+    <layout class="QFormLayout" name="formLayout_specs">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_cpu_title">
+       <property name="text">
+        <string>🧠 CPU:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_cpu_info">
+       <property name="text">
+        <string>Intel(R) Core(TM) Ultra 9 185H</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_gpu_title">
+       <property name="text">
+        <string>🎮 GPU:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_gpu_info">
+       <property name="text">
+        <string>Integrated: Intel(R) Arc(TM) Graphics</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_ram_title">
+       <property name="text">
+        <string>💾 RAM:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="label_ram_info">
+       <property name="text">
+        <string>32189 MB</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_disk_title">
+       <property name="text">
+        <string>💽 Disk:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_disk_info">
+       <property name="text">
+        <string>Total: 952 GB, Free: 439 GB</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_os_title">
+       <property name="text">
+        <string>🖥️ OS:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_os_info">
+       <property name="text">
+        <string>Windows 11 Version 24H2</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_type_title">
+       <property name="text">
+        <string>🏷️ Windows Type:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="label_type_info">
+       <property name="text">
+        <string>windows</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_rating_title">
+       <property name="text">
+        <string>⭐ Overall Rating:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="label_rating_info">
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
+
   </widget>
  </widget>
  <resources/>

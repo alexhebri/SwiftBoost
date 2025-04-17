@@ -16,6 +16,7 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void updateUsageInfo();
     ~MainWindow();
 
 private slots:

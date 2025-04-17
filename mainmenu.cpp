@@ -22,7 +22,7 @@ mainmenu::mainmenu(QWidget *parent)
     ui->setupUi(this);
 
 
-
+/*
     ui->textBrowser_info->setStyleSheet(R"(
     QTextBrowser {
         background-color: #111111;
@@ -46,6 +46,15 @@ mainmenu::mainmenu(QWidget *parent)
     info += "⭐  <b>Overall Rating:</b> " + getSystemRating() + "<br>";
 
     ui->textBrowser_info->setHtml(info);
+*/
+
+    ui->label_cpu_info->setText(getCPUName());
+    ui->label_gpu_info->setText(getGPUInfoLabeled().replace("\n", "<br>"));
+    ui->label_ram_info->setText(getRAMInfo());
+    ui->label_disk_info->setText(getDiskInfo());
+    ui->label_os_info->setText(getOSInfo());
+    ui->label_type_info->setText(getWindowsType());
+    ui->label_rating_info->setText(getSystemRating());
 }
 
 mainmenu::~mainmenu()
