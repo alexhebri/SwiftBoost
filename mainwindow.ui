@@ -286,7 +286,7 @@ color: white;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(14, 246, 204); color: black; font-size: 11pt;</string>
+       <string notr="true">background-color: rgb(46, 139, 87); color: black; font-size: 11pt;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Shape::NoFrame</enum>

@@ -33,7 +33,7 @@ MainWindow::MainWindow(QWidget *parent)
         groupBox->setTitle("Main Menu");
     }
 
-    ui->main_menu->setStyleSheet("background-color: rgb(14, 246, 204); color: black;");
+    ui->main_menu->setStyleSheet("background-color: rgb(46, 139, 87); color: black;");
     ui->windows_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->cpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->gpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
@@ -67,7 +67,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_main_menu_clicked()
 {
-    ui->main_menu->setStyleSheet("background-color: rgb(14, 246, 204); color: black;");
+    ui->main_menu->setStyleSheet("background-color: rgb(46, 139, 87); color: black;");
     ui->windows_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->cpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->gpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
@@ -102,7 +102,7 @@ void MainWindow::on_main_menu_clicked()
 void MainWindow::on_windows_tweaks_clicked()
 {
     ui->main_menu->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
-    ui->windows_tweaks->setStyleSheet("background-color: rgb(14, 246, 204); color: black;");
+    ui->windows_tweaks->setStyleSheet("background-color: rgb(46, 139, 87); color: black;");
     ui->cpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->gpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->power_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
@@ -138,7 +138,7 @@ void MainWindow::on_cpu_tweaks_clicked()
 
     ui->main_menu->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->windows_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
-    ui->cpu_tweaks->setStyleSheet("background-color: rgb(14, 246, 204); color: black;");
+    ui->cpu_tweaks->setStyleSheet("background-color: rgb(46, 139, 87); color: black;");
     ui->gpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->power_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->network->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
@@ -175,7 +175,7 @@ void MainWindow::on_gpu_tweaks_clicked()
     ui->main_menu->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->windows_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->cpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
-    ui->gpu_tweaks->setStyleSheet("background-color: rgb(14, 246, 204); color: black;");
+    ui->gpu_tweaks->setStyleSheet("background-color: rgb(46, 139, 87); color: black;");
     ui->power_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->network->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->revert_and_services->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
@@ -213,7 +213,7 @@ void MainWindow::on_network_clicked()
     ui->cpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->gpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->power_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
-    ui->network->setStyleSheet("background-color: rgb(14, 246, 204); color: black;");
+    ui->network->setStyleSheet("background-color: rgb(46, 139, 87); color: black;");
     ui->revert_and_services->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
 
     network *myWidget = new network(this);
@@ -248,7 +248,7 @@ void MainWindow::on_power_tweaks_clicked()
     ui->windows_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->cpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->gpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
-    ui->power_tweaks->setStyleSheet("background-color: rgb(14, 246, 204); color: black;");
+    ui->power_tweaks->setStyleSheet("background-color: rgb(46, 139, 87); color: black;");
     ui->network->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->revert_and_services->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
 
@@ -286,7 +286,7 @@ void MainWindow::on_revert_and_services_clicked()
     ui->gpu_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->power_tweaks->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
     ui->network->setStyleSheet("background-color: rgb(58, 79, 80); color: white;");
-    ui->revert_and_services->setStyleSheet("background-color: rgb(14, 246, 204); color: black;");
+    ui->revert_and_services->setStyleSheet("background-color: rgb(46, 139, 87); color: black;");
 
     revert_and_services *myWidget = new revert_and_services(this);
 
