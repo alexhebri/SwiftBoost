@@ -272,7 +272,13 @@ color: white;</string>
      </widget>
     </item>
     <item>
-     <widget class="QGraphicsView" name="graphicsView">
+     <widget class="QLabel" name="footerLabel">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -280,7 +286,19 @@ color: white;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(14, 246, 204);</string>
+       <string notr="true">background-color: rgb(14, 246, 204); color: black; font-size: 11pt;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;	© 2025 SwiftBoost V1.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
