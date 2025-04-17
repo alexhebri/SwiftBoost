@@ -146,4 +146,3 @@ void mainmenu::on_textBrowser_copyAvailable(bool b)
 {
     Q_UNUSED(b);
 }
-
