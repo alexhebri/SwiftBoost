@@ -20,6 +20,7 @@ mainmenu::mainmenu(QWidget *parent)
     , ui(new Ui::mainmenu)
 {
     ui->setupUi(this);
+    ui->label_logo->setPixmap(QPixmap(":/path/to/logo_1.png"));
 
 
 /*
