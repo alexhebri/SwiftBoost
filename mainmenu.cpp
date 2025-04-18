@@ -20,7 +20,13 @@ mainmenu::mainmenu(QWidget *parent)
     , ui(new Ui::mainmenu)
 {
     ui->setupUi(this);
-    ui->label_logo->setPixmap(QPixmap(":/path/to/logo_1.png"));
+    ui->label_logo->setScaledContents(true);
+    ui->label_logo->setPixmap(QPixmap(":/images/logo_1.png").scaled(
+        ui->label_logo->width(),
+        ui->label_logo->height(),
+        Qt::KeepAspectRatio,
+        Qt::SmoothTransformation));
+
 
 
 /*

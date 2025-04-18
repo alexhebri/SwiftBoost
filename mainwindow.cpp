@@ -23,7 +23,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setWindowTitle("SwiftBoost");
 
-    QIcon windowIcon("C:/Users/Alex/Desktop/Optimization_Program-UI/logo_1.png");
+    QIcon windowIcon(":/images/logo_1.png");
+    this->setWindowIcon(windowIcon);
+
+
     setWindowIcon(windowIcon);
 
     mainmenu *myWidget = new mainmenu(this);
