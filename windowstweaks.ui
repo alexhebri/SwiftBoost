@@ -28,6 +28,9 @@
     <height>460</height>
    </size>
   </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+  </property>
   <property name="windowTitle">
    <string>GroupBox</string>
   </property>
@@ -338,6 +341,9 @@
             <width>571</width>
             <height>51</height>
            </size>
+          </property>
+          <property name="mouseTracking">
+           <bool>false</bool>
           </property>
           <property name="text">
            <string>Enable Game Mode, App Capture and Hardware Accelerated GPU Scheduling</string>

@@ -95,17 +95,10 @@
      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
     </property>
     <layout class="QFormLayout" name="formLayout_specs">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_cpu_title">
-       <property name="text">
-        <string>🧠 CPU:</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="1">
       <widget class="QLabel" name="label_cpu_info">
        <property name="text">
-        <string>Intel(R) Core(TM) Ultra 9 185H</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -119,7 +112,7 @@
      <item row="1" column="1">
       <widget class="QLabel" name="label_gpu_info">
        <property name="text">
-        <string>Integrated: Intel(R) Arc(TM) Graphics</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -133,7 +126,7 @@
      <item row="2" column="1">
       <widget class="QLabel" name="label_ram_info">
        <property name="text">
-        <string>32189 MB</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -147,7 +140,7 @@
      <item row="3" column="1">
       <widget class="QLabel" name="label_disk_info">
        <property name="text">
-        <string>Total: 952 GB, Free: 439 GB</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -158,38 +151,31 @@
        </property>
       </widget>
      </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_os_info">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
      <item row="5" column="0">
-      <widget class="QLabel" name="label_type_title">
-       <property name="text">
-        <string>🏷️ Windows Type:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QLabel" name="label_type_info">
-       <property name="text">
-        <string>windows</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
       <widget class="QLabel" name="label_rating_title">
        <property name="text">
         <string>⭐ Overall Rating:</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
+     <item row="5" column="1">
       <widget class="QLabel" name="label_rating_info">
        <property name="text">
-        <string>Medium</string>
+        <string/>
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
-      <widget class="QLabel" name="label_os_info">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_cpu_title">
        <property name="text">
-        <string>Windows 11 Version 24H2</string>
+        <string>🧠 CPU:</string>
        </property>
       </widget>
      </item>
