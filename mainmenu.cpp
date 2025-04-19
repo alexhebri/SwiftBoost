@@ -60,7 +60,7 @@ mainmenu::mainmenu(QWidget *parent)
     ui->label_ram_info->setText(getRAMInfo());
     ui->label_disk_info->setText(getDiskInfo());
     ui->label_os_info->setText(getOSInfo());
-    //ui->label_type_info->setText(getWindowsType());
+
     ui->label_rating_info->setText(getSystemRating());
 }
 
@@ -119,7 +119,6 @@ QString getGPUInfoLabeled() {
         deviceIndex++;
     }
 
-    // Build the result with both integrated and dedicated GPUs next to each other
     QString result;
     if (!dedicated.isEmpty() && !integrated.isEmpty()) {
         result = "Dedicated: " + dedicated + " | Integrated: " + integrated;
@@ -129,7 +128,7 @@ QString getGPUInfoLabeled() {
         result = "Integrated: " + integrated;
     }
 
-    // Debug: Output the final result
+
     qDebug() << "Final GPU Info: " << result;
 
     return result.isEmpty() ? "Unknown GPU" : result.trimmed();
@@ -147,8 +146,10 @@ QString getRAMInfo() {
 
 QString getDiskInfo() {
     QStorageInfo storage = QStorageInfo::root();
-    qint64 total = storage.bytesTotal() / (1024 * 1024 * 1024); // in GB
+
+    qint64 total = storage.bytesTotal() / (1024 * 1024 * 1024);
     qint64 free = storage.bytesAvailable() / (1024 * 1024 * 1024);
+
     return QString("Total: %1 GB, Free: %2 GB").arg(total).arg(free);
 }
 

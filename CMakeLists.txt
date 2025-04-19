@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 project(Optimization_Program-UI VERSION 0.1 LANGUAGES CXX)
 
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -18,6 +19,8 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
 )
+
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Optimization_Program-UI
