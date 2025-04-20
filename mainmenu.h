@@ -19,6 +19,8 @@ private slots:
 
     void on_textBrowser_copyAvailable(bool b);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::mainmenu *ui;
 };

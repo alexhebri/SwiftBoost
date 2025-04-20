@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(Optimization_Program-UI VERSION 0.1 LANGUAGES CXX)
-
+project(SwiftBoost VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -13,8 +12,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-
-
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
@@ -22,11 +19,8 @@ set(PROJECT_SOURCES
         mainwindow.ui
 )
 
-
-
-
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(Optimization_Program-UI
+    qt_add_executable(SwiftBoost
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         windowstweaks.h windowstweaks.cpp windowstweaks.ui
@@ -38,33 +32,25 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         mainmenu.h mainmenu.cpp mainmenu.ui
         resources.qrc
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET Optimization_Program-UI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(Optimization_Program-UI SHARED
+        add_library(SwiftBoost SHARED
             ${PROJECT_SOURCES}
         )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(Optimization_Program-UI
+        add_executable(SwiftBoost
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
-target_link_libraries(Optimization_Program-UI PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(SwiftBoost PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
 if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.Optimization_Program-UI)
+  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.SwiftBoost)
 endif()
-set_target_properties(Optimization_Program-UI PROPERTIES
+
+set_target_properties(SwiftBoost PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -73,12 +59,12 @@ set_target_properties(Optimization_Program-UI PROPERTIES
 )
 
 include(GNUInstallDirs)
-install(TARGETS Optimization_Program-UI
+install(TARGETS SwiftBoost
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(Optimization_Program-UI)
+    qt_finalize_executable(SwiftBoost)
 endif()

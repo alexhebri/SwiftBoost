@@ -10,6 +10,9 @@
 #include <dxgi.h>
 #pragma comment(lib, "dxgi.lib")
 
+#include <QDesktopServices>
+#include <QUrl>
+
 QString getCPUName();
 QString getGPUInfoLabeled();
 QString getRAMInfo();
@@ -181,3 +184,9 @@ void mainmenu::on_textBrowser_copyAvailable(bool b)
 {
     Q_UNUSED(b);
 }
+
+void mainmenu::on_pushButton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/alexhebri"));
+}
+
