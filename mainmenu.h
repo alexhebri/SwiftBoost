@@ -16,7 +16,6 @@ public:
     ~mainmenu();
 
 private slots:
-    void on_textEdit_copyAvailable(bool b);
 
     void on_textBrowser_copyAvailable(bool b);
 

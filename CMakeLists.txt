@@ -24,6 +24,7 @@ set(PROJECT_SOURCES
 
 
 
+
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Optimization_Program-UI
         MANUAL_FINALIZATION
@@ -36,8 +37,6 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         revert_and_services.h revert_and_services.cpp revert_and_services.ui
         mainmenu.h mainmenu.cpp mainmenu.ui
         resources.qrc
-
-
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Optimization_Program-UI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -29,7 +29,7 @@ mainmenu::mainmenu(QWidget *parent)
         ui->label_logo->height(),
         Qt::KeepAspectRatio,
         Qt::SmoothTransformation));
-
+    QApplication::setWindowIcon(QIcon(":/images/logo_1.png"));
 
 
     /*

@@ -154,7 +154,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_4">
+         <widget class="QPushButton" name="multimedia_scheduling">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -162,7 +162,7 @@
            </size>
           </property>
           <property name="text">
-           <string>-</string>
+           <string>Optimize Multimedia Scheduling</string>
           </property>
           <property name="checkable">
            <bool>false</bool>
@@ -176,7 +176,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_9">
+         <widget class="QPushButton" name="disable_core_parking">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -184,7 +184,7 @@
            </size>
           </property>
           <property name="text">
-           <string>-</string>
+           <string>Disable Core Parking</string>
           </property>
           <property name="checkable">
            <bool>false</bool>

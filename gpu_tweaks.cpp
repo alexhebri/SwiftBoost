@@ -13,7 +13,7 @@ gpu_tweaks::~gpu_tweaks()
     delete ui;
 }
 
-void gpu_tweaks::on_aaa_clicked()
+void gpu_tweaks::on_nvidia_clicked()
 {
     system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"TdrDelay\" /t REG_DWORD /d \"10\" /f");
     system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"TdrDdiDelay\" /t REG_DWORD /d \"10\" /f");
@@ -28,7 +28,12 @@ void gpu_tweaks::on_aaa_clicked()
     system("reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"Priority\" /t REG_DWORD /d \"6\" /f");
     system("reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"Scheduling Category\" /t REG_SZ /d \"High\" /f");
     system("reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\\Tasks\\Games\" /v \"SFIO Priority\" /t REG_SZ /d \"High\" /f");
-
+    system("reg add \"HKLM\\SOFTWARE\\NVIDIA Corporation\\Global\\Telemetry\" /v NvTelemetryEnabled /t REG_DWORD /d 0 /f");
+    system("reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting\" /v Disabled /t REG_DWORD /d 1 /f");
+    system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v TdrDelay /t REG_DWORD /d 10 /f");
+    system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v HwSchMode /t REG_DWORD /d 2 /f");
+    system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v PreferExternalGPU /t REG_DWORD /d 1 /f");
+    system("reg add \"HKCU\\System\\GameConfigStore\" /v GameDVR_FSEBehavior /t REG_DWORD /d 2 /f");
     system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"ExitLatency\" /t REG_DWORD /d \"1\" /f");
     system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"ExitLatencyCheckEnabled\" /t REG_DWORD /d \"1\" /f");
     system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"Latency\" /t REG_DWORD /d \"1\" /f");
@@ -263,6 +268,24 @@ void gpu_tweaks::on_amd_radeon_clicked()
 void gpu_tweaks::on_amd_ultralow_clicked()
 {
     system("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}\\0000\" /v \"EnableUlps\" /t REG_DWORD /d \"0\" /f");
+
+}
+
+
+void gpu_tweaks::on_latency_and_render_clicked()
+{
+    system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v HwSchMode /t REG_DWORD /d 2 /f");
+    system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v PreferExternalGPU /t REG_DWORD /d 1 /f");
+    system("reg add \"HKCU\\System\\GameConfigStore\" /v GameDVR_FSEBehavior /t REG_DWORD /d 2 /f");
+
+}
+
+
+void gpu_tweaks::on_nvidia_telemety_clicked()
+{
+    system("reg add \"HKLM\\SOFTWARE\\NVIDIA Corporation\\Global\\Telemetry\" /v NvTelemetryEnabled /t REG_DWORD /d 0 /f");
+    system("reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting\" /v Disabled /t REG_DWORD /d 1 /f");
+    system("reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v TdrDelay /t REG_DWORD /d 10 /f");
 
 }
 

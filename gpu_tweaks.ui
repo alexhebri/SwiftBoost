@@ -93,7 +93,7 @@
          <number>1</number>
         </property>
         <item>
-         <widget class="QPushButton" name="aaa">
+         <widget class="QPushButton" name="nvidia">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -172,7 +172,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_3">
+         <widget class="QPushButton" name="latency_and_render">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -180,7 +180,7 @@
            </size>
           </property>
           <property name="text">
-           <string>//</string>
+           <string>Low Latency and Render Boost</string>
           </property>
           <property name="checkable">
            <bool>false</bool>
@@ -194,7 +194,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="aaa_5">
+         <widget class="QPushButton" name="nvidia_telemety">
           <property name="minimumSize">
            <size>
             <width>231</width>
@@ -202,7 +202,7 @@
            </size>
           </property>
           <property name="text">
-           <string>//</string>
+           <string>Driver-Level Stabilization and Telemetry Reduction</string>
           </property>
           <property name="checkable">
            <bool>false</bool>

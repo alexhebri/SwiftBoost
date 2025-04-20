@@ -24,8 +24,6 @@ private slots:
 
     void on_network_ping_clicked();
 
-    void on_network_winsock_clicked();
-
     void on_bloatware_removal_clicked();
 
     void on_debloat_back_clicked();

@@ -30,6 +30,10 @@ private slots:
 
     void on_enable_idle_clicked();
 
+    void on_multimedia_scheduling_clicked();
+
+    void on_disable_core_parking_clicked();
+
 private:
     Ui::cpu_tweaks *ui;
 };
