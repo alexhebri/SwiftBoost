@@ -7,6 +7,9 @@
 #include <QTextBrowser>
 #include <QGroupBox>
 
+#include <dxgi.h>
+#pragma comment(lib, "dxgi.lib")
+
 QString getCPUName();
 QString getGPUInfoLabeled();
 QString getRAMInfo();
@@ -90,48 +93,42 @@ QString getCPUName() {
 }
 
 QString getGPUInfoLabeled() {
+    IDXGIFactory* pFactory = nullptr;
+    HRESULT hr = CreateDXGIFactory(__uuidof(IDXGIFactory), (void**)(&pFactory));
+
+    if (FAILED(hr)) return "DXGI factory creation failed";
+
     QString dedicated, integrated;
-    DISPLAY_DEVICE dd;
-    dd.cb = sizeof(dd);
 
-    int deviceIndex = 0;
-    while (EnumDisplayDevices(NULL, deviceIndex, &dd, 0)) {
-        QString name = QString::fromWCharArray(dd.DeviceString);
+    UINT i = 0;
+    IDXGIAdapter* pAdapter = nullptr;
+    while (pFactory->EnumAdapters(i, &pAdapter) != DXGI_ERROR_NOT_FOUND) {
+        DXGI_ADAPTER_DESC desc;
+        pAdapter->GetDesc(&desc);
 
-        // Debug: Output the name of the detected device
-        qDebug() << "Detected GPU: " << name;
+        QString name = QString::fromWCharArray(desc.Description);
+        qDebug() << "DXGI GPU: " << name;
 
-        // Check for dedicated GPUs (e.g., NVIDIA, Radeon)
         if (name.contains("NVIDIA", Qt::CaseInsensitive) || name.contains("Radeon", Qt::CaseInsensitive)) {
-            if (dedicated.isEmpty()) {
-                dedicated = name; // Assign the first detected dedicated GPU
-                qDebug() << "Assigned Dedicated GPU: " << dedicated; // Debugging statement
-            }
-        }
-        // Check for integrated GPUs (e.g., Intel, Vega)
-        else if (name.contains("Intel", Qt::CaseInsensitive) || name.contains("Vega", Qt::CaseInsensitive)) {
-            if (integrated.isEmpty()) {
-                integrated = name; // Assign the first detected integrated GPU
-                qDebug() << "Assigned Integrated GPU: " << integrated; // Debugging statement
-            }
+            if (dedicated.isEmpty()) dedicated = name;
+        } else if (name.contains("Intel", Qt::CaseInsensitive) || name.contains("Vega", Qt::CaseInsensitive)) {
+            if (integrated.isEmpty()) integrated = name;
         }
 
-        deviceIndex++;
+        pAdapter->Release();
+        ++i;
     }
 
-    QString result;
-    if (!dedicated.isEmpty() && !integrated.isEmpty()) {
-        result = "Dedicated: " + dedicated + " | Integrated: " + integrated;
-    } else if (!dedicated.isEmpty()) {
-        result = "Dedicated: " + dedicated;
-    } else if (!integrated.isEmpty()) {
-        result = "Integrated: " + integrated;
-    }
+    pFactory->Release();
 
-
-    qDebug() << "Final GPU Info: " << result;
-
-    return result.isEmpty() ? "Unknown GPU" : result.trimmed();
+    if (!dedicated.isEmpty() && !integrated.isEmpty())
+        return "Dedicated: " + dedicated + " | Integrated: " + integrated;
+    else if (!dedicated.isEmpty())
+        return "Dedicated: " + dedicated;
+    else if (!integrated.isEmpty())
+        return "Integrated: " + integrated;
+    else
+        return "Unknown GPU";
 }
 
 
