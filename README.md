@@ -123,7 +123,7 @@ See the [`LICENSE`](https://github.com/alexhebri/SwiftBoost/blob/main/LICENSE) f
 ---
 
 <p align="center">
-  <img src="https://github.com/alexhebri/SwiftBoost/blob/main/images/logo_2.png" width="520" alt="SwiftBoost Icon"/>
+  <img src="https://github.com/alexhebri/SwiftBoost/blob/main/images/logo_3.png" width="520" alt="SwiftBoost Icon"/>
   <br/>
   <strong>SwiftBoost</strong> — Speed meets control.
 </p>
