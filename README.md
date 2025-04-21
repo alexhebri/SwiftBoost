@@ -72,8 +72,8 @@ SwiftBoost isn’t just another tweak tool — it’s your personal system pit c
     ---
 
 ## 🧠 Performance Tuning Toolkit
-🔧 **CPU Optimization**:
 
+🔧 **CPU Optimization**:
 Your processor deserves the spotlight. Unlock its full potential with these tweaks:
 - 🔓 Unpark CPU cores to eliminate artificial bottlenecks
 - ⚡ Enable High Performance / Ultimate Power Plan for consistent speed under load
@@ -83,7 +83,6 @@ Your processor deserves the spotlight. Unlock its full potential with these twea
 - ⏳ Smart optimization suggestions based on your specs (coming soon!)
 
 🎮 **GPU Optimization**:
-
 For gamers and creators alike — maximize every frame and render:
 - 🧠 Force maximum performance mode (NVIDIA/AMD)
 - 🗑️ Clear shader caches to fix stuttering and graphical glitches
@@ -92,7 +91,6 @@ For gamers and creators alike — maximize every frame and render:
 - 🎨 Apply recommended graphics settings based on your detected GPU model
 
 🔌 **Power Tweaks**:
-
 Extend battery life or supercharge performance — your choice:
 - 🔋 Disable USB selective suspend to reduce latency on peripherals
 - 🌙 Turn off hybrid sleep and connected standby
