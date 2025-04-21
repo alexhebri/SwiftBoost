@@ -41,27 +41,77 @@ This is the **v1.0** release – the first public version of SwiftBoost. It cont
 ---
 
 ## 🧠 Features
+SwiftBoost isn’t just another tweak tool — it’s your personal system pit crew. Here's what it offers in version v1.0:
 
-- 🔍 **System Scanner**: Displays CPU, GPU, RAM, Disk, OS version, and overall system rating.
-- 🧰 **Modular Tweak Panels**:
-  - Windows Tweaks
-  - CPU Tweaks
-  - GPU Tweaks
-  - Power Tweaks
-  - Network Boosters
-  - Revert/Restore panel
-- 🌙 Modern, dark-themed UI built with Qt.
-- 🛡️ Safe optimizations with optional revert buttons.
-- 🧠 Smart rating system based on RAM and CPU specs.
-- 🔔 Auto-update checker for GitHub releases.
+ 💻 **System Dashboard**:
+   - View detailed specs: CPU, GPU, RAM, Disk, OS, and Windows Type
+   - 🧠 Intelligent System Rating: Get an instant performance label (Low / Medium / High)
+    Live disk space stats with used vs. free display
+
+ ⚙️ **Windows Tweaks**:
+ - 📴 Disable Fast Startup to reduce boot issues
+ - 💡 Enable Dark Mode instantly across the UI
+ - 🔒 Disable telemetry for a more private Windows experience
+ - 🚫 Remove unnecessary services like Xbox Game Bar and Cortana
+    
+  🧼 **Cleanup Tools**:
+  - 🧹 Remove temporary files and recycle bin content
+  - 📂 Clear prefetch, logs, and other cache files
+  - 🧽 Optional deep-clean mode for heavy junk
+
+  📶 **Network Optimization**:
+  - 🚀 Boost online performance by tweaking TCP parameters
+  - 🧱 Block telemetry endpoints for better privacy
+  - ✈️ Disable Windows auto-updates to reduce background usage
+
+  🎮 **Gaming Tools**:
+  - 🎯 Optimize Windows for gaming mode
+  - 🕹️ Disable background Xbox services
+  - 🛑 Kill high-latency tasks that affect FPS
+
+    ---
+
+## 🧠 Performance Tuning Toolkit
+🔧 **CPU Optimization**:
+
+Your processor deserves the spotlight. Unlock its full potential with these tweaks:
+- 🔓 Unpark CPU cores to eliminate artificial bottlenecks
+- ⚡ Enable High Performance / Ultimate Power Plan for consistent speed under load
+- ❄️ Disable thermal throttling (where safe) to maintain peak frequencies
+- 🧼 Clean up idle tasks and unnecessary services hogging CPU cycles
+- 🚀 Optimize core affinity for better multi-threaded app performance
+- ⏳ Smart optimization suggestions based on your specs (coming soon!)
+
+🎮 **GPU Optimization**:
+
+For gamers and creators alike — maximize every frame and render:
+- 🧠 Force maximum performance mode (NVIDIA/AMD)
+- 🗑️ Clear shader caches to fix stuttering and graphical glitches
+- ❌ Disable hardware-accelerated GPU scheduling if it causes compatibility issues
+- 🔍 Adjust power management mode to prevent performance dips
+- 🎨 Apply recommended graphics settings based on your detected GPU model
+
+🔌 **Power Tweaks**:
+
+Extend battery life or supercharge performance — your choice:
+- 🔋 Disable USB selective suspend to reduce latency on peripherals
+- 🌙 Turn off hybrid sleep and connected standby
+- ⚙️ Manage core parking and dynamic frequency scaling
+- 💨 Disable power-hungry background processes
+- 🔁 Auto-switch between power plans based on your current activity (coming soon)
+
+    ...and that’s just the beginning. More tools, smarter automation, and next-gen optimization features are on the roadmap!
 
 ---
 
-## 🧪 Built With
+## 📦 Download & Installation
 
-- 🧱 **C++** with Qt 6
-- 🎨 Qt Designer
-- 📦 Windows APIs
+> 💾 [Click here to download the latest `.zip` from Releases »](https://github.com/alexhebri/SwiftBoost/releases/latest)
+
+### ✅ How to Run:
+1. Download and extract the `.zip` file from the latest release.
+2. Run `SwiftBoost.exe` (no installation required).
+3. Enjoy optimizing!
 
 ---
 
@@ -87,14 +137,11 @@ This is the **v1.0** release – the first public version of SwiftBoost. It cont
 
 ---
 
-## 📦 Download & Installation
+## 🧪 Built With
 
-> 💾 [Click here to download the latest `.zip` from Releases »](https://github.com/alexhebri/SwiftBoost/releases/latest)
-
-### ✅ How to Run:
-1. Download and extract the `.zip` file from the latest release.
-2. Run `SwiftBoost.exe` (no installation required).
-3. Enjoy optimizing!
+- 🧱 **C++** with Qt 6
+- 🎨 Qt Designer
+- 📦 Windows APIs
 
 ---
 
